@@ -19,7 +19,7 @@ export default function ScrollToTop() {
   useEffect(() => {
 
     function handleScroll() {
-      if (window.scrollY > window.innerHeight) {
+      if (window.scrollY > window.innerHeight-150) {
         setStyle({ ...style, display: `flex` });
       } else {
         setStyle({ ...style, display: `none` });

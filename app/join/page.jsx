@@ -22,7 +22,7 @@ export default function JoinPage() {
     e.preventDefault();
 
     console.log(formData);
-ata({
+    setFormData({
       name: "",
       email: "",
       field: "",
