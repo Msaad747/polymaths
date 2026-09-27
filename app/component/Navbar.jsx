@@ -12,7 +12,7 @@ export default function Navbar() {
         <Link href="/about">About</Link>
         <Link href="/ideas">Ideas</Link>
         <Link href="/projects">Projects</Link>
-        <Link href="/events">Events</Link>
+        
       </nav>
 
       <Link href="/join" className="join-button">

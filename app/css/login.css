@@ -1,0 +1,440 @@
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page {
+  min-height: calc(100vh - 80px);
+  padding: 8vw 5vw;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.login-header {
+  margin-bottom: 70px;
+}
+
+.login-logo {
+  display: inline-block;
+  margin-bottom: 60px;
+
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #171717;
+  text-decoration: none;
+}
+
+.login-subtitle {
+  margin-bottom: 20px;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.login-header h1 {
+  max-width: 700px;
+
+  font-size: clamp(55px, 9vw, 110px);
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+  font-weight: 500;
+}
+
+/* =========================
+   LOGIN FORM
+========================= */
+
+.login-form {
+  width: 100%;
+}
+
+/*
+   IMPORTANT:
+   We use .login-form-group instead of .form-group
+   so the Join page's floating-label CSS does not
+   affect the Login page.
+*/
+
+.login-form-group {
+  display: flex;
+  flex-direction: column;
+
+  padding: 25px 0;
+
+  border-bottom: 1px solid #bdb8ae;
+}
+
+/* Label stays in normal position */
+.login-form-group label {
+  position: static;
+
+  display: block;
+
+  margin: 0 0 12px 0;
+
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 1px;
+
+  color: #777;
+
+  text-transform: uppercase;
+
+  transition: none;
+}
+
+/* Input */
+.login-form-group input {
+  width: 100%;
+  height: 45px;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #171717;
+
+  font-family: inherit;
+  font-size: 20px;
+}
+
+/* Placeholder */
+.login-form-group input::placeholder {
+  color: #aaa;
+}
+
+/* Focus does NOT move the label */
+.login-form-group input:focus {
+  outline: none;
+}
+
+/* =========================
+   FORGOT PASSWORD
+========================= */
+
+.login-options {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 18px;
+}
+
+.login-options a {
+  font-size: 13px;
+  color: #777;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.login-error {
+  margin-top: 25px;
+
+  font-size: 14px;
+  color: #777;
+}
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-button {
+  width: 100%;
+
+  margin-top: 40px;
+  padding: 18px 30px;
+
+  border: 1px solid #171717;
+
+  background: #171717;
+  color: #f4f1ea;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.login-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.login-divider {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  margin: 40px 0;
+
+  color: #777;
+
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background: #bdb8ae;
+}
+
+/* =========================
+   GOOGLE BUTTON
+========================= */
+
+.google-button {
+  width: 100%;
+
+  padding: 17px 30px;
+
+  border: 1px solid #171717;
+
+  background: transparent;
+  color: #171717;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* =========================
+   SIGN UP
+========================= */
+
+.signup-text {
+  margin-top: 35px;
+
+  text-align: center;
+
+  font-size: 14px;
+  color: #777;
+}
+
+.signup-text a {
+  color: #171717;
+
+  text-decoration: none;
+
+  transition: opacity 0.3s ease;
+}
+
+/* =========================
+   DESKTOP / LAPTOP HOVER
+   Only devices with a mouse
+========================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .login-logo:hover {
+    text-decoration: underline;
+  }
+
+  .login-options a:hover {
+    color: #171717;
+  }
+
+  .login-button:hover:not(:disabled) {
+    background: transparent;
+    color: #171717;
+
+    transform: translateX(8px);
+  }
+
+  .google-button:hover {
+    background: #171717;
+    color: #f4f1ea;
+  }
+
+  .signup-text a:hover {
+    opacity: 0.6;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 860px) {
+
+  .login-page {
+    padding: 8vw 5vw 12vw;
+  }
+
+  .login-container {
+    max-width: 650px;
+  }
+
+  .login-header {
+    margin-bottom: 60px;
+  }
+
+  .login-header h1 {
+    font-size: clamp(50px, 11vw, 90px);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 560px) {
+
+  .login-page {
+    min-height: auto;
+
+    padding: 12vw 5vw 20vw;
+  }
+
+  .login-container {
+    max-width: 100%;
+  }
+
+  .login-header {
+    margin-bottom: 50px;
+  }
+
+  .login-logo {
+    margin-bottom: 45px;
+
+    font-size: 16px;
+  }
+
+  .login-subtitle {
+    margin-bottom: 16px;
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .login-header h1 {
+    max-width: 100%;
+
+    font-size: clamp(42px, 14vw, 75px);
+    line-height: 0.82;
+
+    letter-spacing: -0.06em;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  /* Form */
+  .login-form-group {
+    padding: 20px 0;
+  }
+
+  .login-form-group label {
+    margin-bottom: 10px;
+
+    font-size: 11px;
+  }
+
+  .login-form-group input {
+    height: 42px;
+
+    font-size: 18px;
+  }
+
+  /* Forgot password */
+  .login-options {
+    margin-top: 15px;
+  }
+
+  .login-options a {
+    font-size: 12px;
+  }
+
+  /* Login button */
+  .login-button {
+    margin-top: 35px;
+
+    padding: 17px 20px;
+  }
+
+  /* Divider */
+  .login-divider {
+    margin: 35px 0;
+
+    gap: 15px;
+  }
+
+  /* Google */
+  .google-button {
+    padding: 16px 20px;
+  }
+
+  /* Sign up */
+  .signup-text {
+    margin-top: 30px;
+
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+  .login-page {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .login-header h1 {
+    font-size: clamp(38px, 14vw, 58px);
+  }
+
+  .login-form-group input {
+    font-size: 17px;
+  }
+
+  .login-button,
+  .google-button {
+    font-size: 14px;
+  }
+}
+

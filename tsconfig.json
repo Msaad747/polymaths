@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/join/page.jsx"  ],
+, "app/(auth)/join/page.jsx"  ],
   "exclude": ["node_modules"]
 }

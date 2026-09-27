@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import "../util.css"
+import Link from "next/link";
+import "../../css/util.css";
 
 export default function JoinPage() {
   const [formData, setFormData] = useState({
@@ -51,7 +52,6 @@ export default function JoinPage() {
       <section className="join-form-section">
         <form onSubmit={handleSubmit} className="join-form">
           <div className="form-group">
-
             <input
               id="name"
               name="name"
@@ -61,11 +61,10 @@ export default function JoinPage() {
               onChange={handleChange}
               required
             />
-            <label htmlFor="name">01 — NAME :</label>
+            <label htmlFor="name">01 — NAME</label>
           </div>
 
           <div className="form-group">
-
             <input
               id="email"
               name="email"
@@ -75,11 +74,10 @@ export default function JoinPage() {
               onChange={handleChange}
               required
             />
-            <label htmlFor="email">02 — EMAIL :</label>
+            <label htmlFor="email">02 — EMAIL</label>
           </div>
 
           <div className="form-group">
-
             <input
               id="field"
               name="field"
@@ -87,12 +85,11 @@ export default function JoinPage() {
               placeholder=""
               value={formData.field}
               onChange={handleChange}
-              />
-              <label htmlFor="field">03 — FIELD / INTEREST :</label>
+            />
+            <label htmlFor="field">03 — FIELD / INTEREST</label>
           </div>
 
           <div className="form-group">
-
             <textarea
               id="reason"
               name="reason"
@@ -103,10 +100,15 @@ export default function JoinPage() {
             />
             <label htmlFor="reason">04 — WHY JOIN?</label>
           </div>
-
-          <button type="submit" className="join-submit">
-            Submit application →
-          </button>
+          <div className="join-buttons">
+            <button type="submit" className="join-submit">
+              Submit application →
+            </button>
+            <p className="login-text">
+              Already have an account?
+              <Link href="/login">Login</Link>
+            </p>
+          </div>
         </form>
       </section>
     </main>

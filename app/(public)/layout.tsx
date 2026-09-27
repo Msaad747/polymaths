@@ -1,5 +1,7 @@
-import "./css/globals.css";
-
+import "../css/globals.css";
+import Navbar from "../component/Navbar.jsx";
+import Footer from "../component/Footer.jsx";
+import ScrollToTop from "../component/ScrollToTop";
 
 export const metadata = {
   title: "Society of Polymaths",
@@ -20,7 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <ScrollToTop />
+
+        <Footer />
+      </body>
     </html>
   );
 }

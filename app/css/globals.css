@@ -33,14 +33,18 @@ button {
   background: #171717;
   color: #f4f1ea;
 }
+
+
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
   height: 80px;
   padding: 0 5vw;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   border-bottom: 1px solid #d5d0c7;
 }
 
@@ -58,38 +62,26 @@ button {
 .navbar nav a {
   font-size: 14px;
   color: #555;
-  transition: color 0.3s ease , transform .3s ;
   padding: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
-
-.navbar nav a:hover {
-  color: #171717;
-  transform: translateY(-4px);
-  
-}
-
 
 .join-button {
   border: 1px solid #171717;
   padding: 10px 18px;
   border-radius: 999px;
-
   font-size: 14px;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.join-button:hover {
-  background: #171717;
-  color: #f4f1ea;
-}
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
   min-height: calc(100vh - 80px);
-
   padding: 8vh 5vw 5vh;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -130,19 +122,20 @@ button {
 
 .hero-arrow {
   font-size: 40px;
-  transition: all .3s ease-out;
+  transition: transform 0.3s ease-out;
 }
-.hero-arrow:hover{
-  cursor: pointer;
-  scale: 1.2;
-}
+
+
+/* =========================
+   ABOUT
+========================= */
+
 .about-page {
   padding: 8vw 5vw;
 }
 
 .about-hero {
   min-height: 70vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -150,7 +143,6 @@ button {
 
 .eyebrow {
   margin-bottom: 30px;
-
   font-size: 12px;
   letter-spacing: 2px;
   color: #777;
@@ -165,13 +157,17 @@ button {
 .about-intro {
   max-width: 800px;
   margin-left: auto;
-
   display: grid;
   gap: 30px;
-
   font-size: 25px;
   line-height: 1.4;
 }
+
+
+/* =========================
+   AXIOMS
+========================= */
+
 .axioms {
   padding: 12vw 5vw;
   border-top: 1px solid #d5d0c7;
@@ -181,33 +177,23 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
   margin-bottom: 100px;
-  cursor: default;  
+  cursor: default;
 }
 
 .section-heading > p {
   font-size: 12px;
   letter-spacing: 2px;
   color: #777;
-  transition: all .3s ease;
+  transition: transform 0.3s ease;
 }
 
 .section-heading h2 {
   width: 60%;
-
   font-size: clamp(70px, 10vw, 150px);
   line-height: 0.85;
   letter-spacing: -0.07em;
-  transition: all .3s ease;
-}
-.section-heading h2:hover {
-  transform: translateY(-10px) ;
-}
-
-.section-heading > p:hover{
-  transform: translatex(10px) ;
-
+  transition: transform 0.3s ease;
 }
 
 .axioms-list {
@@ -218,17 +204,10 @@ button {
   display: grid;
   grid-template-columns: 100px 1fr 50px;
   gap: 30px;
-
   padding: 35px 0;
-
   border-bottom: 1px solid #bdb8ae;
-
   transition: padding 0.3s ease;
   cursor: pointer;
-}
-
-.axiom:hover {
-  padding: 35px 20px;
 }
 
 .axiom-number {
@@ -238,7 +217,6 @@ button {
 
 .axiom h3 {
   margin-bottom: 10px;
-
   font-size: clamp(25px, 3vw, 45px);
   font-weight: 500;
   letter-spacing: -0.04em;
@@ -246,7 +224,6 @@ button {
 
 .axiom p {
   max-width: 600px;
-
   font-size: 16px;
   line-height: 1.5;
   color: #666;
@@ -256,6 +233,12 @@ button {
   font-size: 25px;
   text-align: right;
 }
+
+
+/* =========================
+   WHAT WE DO
+========================= */
+
 .what-we-do {
   padding: 12vw 5vw;
   background: #171717;
@@ -279,24 +262,16 @@ button {
 .activity {
   min-height: 350px;
   padding: 40px;
-
   border-right: 1px solid #444;
   border-bottom: 1px solid #444;
-
   display: flex;
   flex-direction: column;
-
-  transition: background 0.3s ease, scale .3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
 
 .activity:nth-child(even) {
   border-right: none;
-}
-
-.activity:hover  {
-  background: #222;
-  scale: .9;
 }
 
 .activity > span:first-child {
@@ -306,7 +281,6 @@ button {
 
 .activity h3 {
   margin-top: auto;
-
   font-size: clamp(45px, 7vw, 100px);
   line-height: 0.85;
   letter-spacing: -0.06em;
@@ -315,7 +289,6 @@ button {
 .activity p {
   max-width: 450px;
   margin-top: 25px;
-
   color: #aaa;
   line-height: 1.5;
 }
@@ -323,13 +296,14 @@ button {
 .activity-arrow {
   align-self: flex-end;
   margin-top: 30px;
-
   font-size: 25px;
-  transition: all .4s;
+  transition: transform 0.4s ease;
 }
-.activity:hover .activity-arrow{
-  scale: 2;
-}
+
+
+/* =========================
+   PROJECTS
+========================= */
 
 .projects {
   padding: 12vw 5vw;
@@ -343,20 +317,26 @@ button {
   padding-top: 70px;
 }
 
-
-.soon{
+.soon {
   font-size: 25px;
   letter-spacing: 2px;
   color: #777;
 }
-.none{
+
+.none {
   border-top: 1px solid #bdb8ae;
   text-align: center;
-  padding-top:20px ;
+  padding-top: 20px;
   font-size: 13px;
   letter-spacing: 3px;
   color: #777;
 }
+
+
+/* =========================
+   EVENTS
+========================= */
+
 .events-page {
   padding: 0 5vw;
 }
@@ -457,27 +437,206 @@ button {
   cursor: pointer;
 }
 
-.event-page-content button:hover {
+
+/* =========================
+   JOIN PAGE
+========================= */
+
+.join-page {
+  padding: 0 5vw;
+}
+
+.join-hero {
+  min-height: 70vh;
+  padding: 8vw 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.join-hero h1 {
+  font-size: clamp(70px, 12vw, 170px);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+}
+
+.join-intro {
+  max-width: 500px;
+  margin-top: 20px;
+  margin-bottom: 19px;
+  margin-left: auto;
+  margin-right: 50px;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #666;
+}
+
+.join-form-section {
+  padding: 10vw 0 15vw;
+  border-top: 1px solid #bdb8ae;
+}
+
+.join-form {
+  max-width: 900px;
+  margin: auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 35px 0;
+  border-bottom: 1px solid #bdb8ae;
+  position: relative;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50px;
+  font-size: 25px;
+  color: #aaa;
+  transition: all 0.3s ease;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 30px 0;
+  font-family: inherit;
+  font-size: 25px;
+  color: #171717;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #aaa;
+}
+
+.form-group textarea {
+  resize: vertical;
+  line-height: 1.4;
+}
+
+.join-submit {
+  margin-top: 50px;
+  padding: 18px 30px;
+  border: 1px solid #171717;
   background: #171717;
   color: #f4f1ea;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.scroll-top {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+.cud {
+  cursor: default;
+}
+
+
+/* =========================
+   IDEAS
+========================= */
+
+.ideas-page {
+  padding: 0 5vw;
+}
+
+.ideas-hero {
+  min-height: 75vh;
+  padding: 8vw 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  font-size: 30px;
+}
+
+.ideas-hero h1 {
+  font-size: clamp(70px, 12vw, 170px);
+  line-height: 0.82;
+  letter-spacing: -0.07em;
+}
+
+.ideas-intro {
+  max-width: 500px;
+  margin-top: 60px;
+  margin-left: auto;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.ideas-list-section {
+  padding-bottom: 12vw;
+}
+
+.ideas-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid #bdb8ae;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.idea-card {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 60px;
+  padding: 60px 0;
+  border-top: 1px solid #bdb8ae;
+  transition: padding 0.3s ease;
+}
+
+.idea-number {
+  font-size: 14px;
+  color: #777;
+}
+
+.idea-category {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.idea-content h2 {
+  margin-top: 20px;
+  font-size: clamp(50px, 8vw, 110px);
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+  font-weight: 500;
+}
+
+.idea-content p {
+  max-width: 600px;
+  margin-top: 30px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.idea-content a {
+  display: inline-block;
+  margin-top: 35px;
+  color: #171717;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.idea-content a span {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
 }
 
 
+/* =========================
+   FOOTER
+========================= */
 
-.scroll-top:hover{
-  transform: scale(1.05);
-  font-size:40px
-}
 .footer {
   padding: 8vw 5vw 30px;
   background: #171717;
@@ -529,22 +688,135 @@ button {
   transition: opacity 0.3s ease;
 }
 
-.footer-links a:hover {
-  opacity: 0.5;
-}
-
 .footer-bottom {
   padding-top: 20px;
   border-top: 1px solid #444;
-
   display: flex;
   justify-content: space-between;
-
   font-size: 11px;
   color: #777;
 }
 
+.scroll-top {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+
+/* ==================================================
+   DESKTOP / LAPTOP HOVER ONLY
+   No hover effects on touch devices
+================================================== */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .navbar nav a:hover {
+    color: #171717;
+    transform: translateY(-4px);
+  }
+
+  .join-button:hover {
+    background: #171717;
+    color: #f4f1ea;
+  }
+
+  .hero-arrow:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+
+  .section-heading h2:hover {
+    transform: translateY(-10px);
+  }
+
+  .section-heading > p:hover {
+    transform: translateX(10px);
+  }
+
+  .axiom:hover {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .activity:hover {
+    background: #222;
+    transform: scale(0.9);
+  }
+
+  .activity:hover .activity-arrow {
+    transform: scale(2);
+  }
+
+  .event-page-content button:hover {
+    background: #171717;
+    color: #f4f1ea;
+  }
+
+  .join-submit:hover {
+    background: transparent;
+    color: #171717;
+    transform: translateX(8px);
+  }
+
+  .idea-card:hover {
+    padding-left: 20px;
+  }
+
+  .idea-content a:hover span {
+    transform: translate(5px, -5px);
+  }
+
+  .footer-links a:hover {
+    opacity: 0.5;
+  }
+
+  .scroll-top:hover {
+    transform: scale(1.05);
+    font-size: 40px;
+  }
+
+  /*
+     Floating form label on desktop
+  */
+
+  .form-group:hover label,
+  .form-group input:focus-visible + label,.form-group textarea:focus-visible +label,
+  .form-group input:not(:placeholder-shown) + label,
+  .form-group textarea:not(:placeholder-shown) + label {
+    top: 20px;
+    font-size: 13px;
+    color: #777;
+  }
+}
+.join-buttons{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+}
+.login-text{
+  padding-top: 40px;
+  cursor: default;
+  
+}
+.login-text a{
+padding-left:5px ;
+text-decoration: underline;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 860px) {
+
   .navbar {
     height: auto;
     padding: 18px 5vw;
@@ -576,6 +848,7 @@ button {
   .projects,
   .events-page,
   .join-page,
+  .ideas-page,
   .footer {
     padding-left: 5vw;
     padding-right: 5vw;
@@ -610,7 +883,8 @@ button {
 
   .about-intro,
   .events-intro,
-  .join-intro {
+  .join-intro,
+  .ideas-intro {
     max-width: 100%;
     margin-left: 0;
     margin-right: 0;
@@ -620,10 +894,6 @@ button {
   .axiom {
     grid-template-columns: 1fr;
     gap: 12px;
-    padding: 28px 0;
-  }
-
-  .axiom:hover {
     padding: 28px 0;
   }
 
@@ -651,10 +921,6 @@ button {
     font-size: 60px;
   }
 
-  .join-page {
-    padding: 0 5vw;
-  }
-
   .join-page > section:first-child {
     padding-top: 30px;
   }
@@ -679,9 +945,20 @@ button {
     flex-wrap: wrap;
     gap: 32px 48px;
   }
+
+  .idea-card {
+    grid-template-columns: 100px 1fr;
+    gap: 30px;
+  }
 }
 
+
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 560px) {
+
   .navbar {
     padding: 14px 5vw;
   }
@@ -698,9 +975,6 @@ button {
   .about-hero h1,
   .events-hero h1,
   .join-hero h1,
-  .about-hero h1,
-  .events-hero h1,
-  .join-hero h2,
   .ideas-hero h1,
   .fs-6 {
     max-width: 100%;
@@ -728,6 +1002,10 @@ button {
     font-size: 16px;
   }
 
+  .axiom {
+    padding: 28px 0;
+  }
+
   .axiom h3 {
     font-size: 28px;
   }
@@ -742,14 +1020,17 @@ button {
 
   .form-group {
     padding: 18px 0;
+    margin-top:12px ;
   }
 
+  
+
   .form-group label {
-    position: static;
-    display: block;
+    position: absolute;
+    top: 25px;
     margin-bottom: 10px;
-    font-size: 13px;
-    top: auto;
+    font-size: 18px;
+    color: #777;
   }
 
   .form-group input,
@@ -757,12 +1038,6 @@ button {
     height: auto;
     padding: 0;
     font-size: 20px;
-  }
-
-  .form-group:hover label,
-  .form-group input:not(:placeholder-shown) + label {
-    top: auto;
-    font-size: 13px;
   }
 
   .join-page .fs-6 {
@@ -776,28 +1051,17 @@ button {
   }
 
   .join-page .form-group {
-    padding: 18px 0;
+    padding: 25px 0;
+    margin-top: 15px;
   }
 
-  .join-page .form-group label {
-    position: static;
-    display: block;
-    margin-bottom: 10px;
-    font-size: 13px;
-    top: auto;
-  }
+  
 
   .join-page .form-group input,
   .join-page .form-group textarea {
     height: auto;
     padding: 0;
     font-size: 20px;
-  }
-
-  .join-page .form-group:hover label,
-  .join-page .form-group input:not(:placeholder-shown) + label {
-    top: auto;
-    font-size: 13px;
   }
 
   .join-submit {
@@ -807,225 +1071,33 @@ button {
   .footer h2 {
     font-size: clamp(46px, 19vw, 110px);
   }
-}
-.join-page {
-  padding: 0 5vw;
-}
 
-.join-hero {
-  min-height: 70vh;
-  padding: 8vw 0;
-  display: flex;
+  .idea-card {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 40px 0;
+  }
+
+  .idea-content h2 {
+    font-size: clamp(45px, 14vw, 80px);
+  }
+  .join-buttons{
   flex-direction: column;
-  justify-content: center;
-}
-
-.join-hero h1 {
-  font-size: clamp(70px, 12vw, 170px);
-  line-height: 0.92;
-  letter-spacing: -0.07em;
-}
-
-.join-intro {
-  max-width: 500px;
-  margin-top: 20px;
-  margin-bottom: 19px;
-  margin-left: auto;
-  margin-right: 50px;
-  font-size: 20px;
-  line-height: 1.4;
-  color: #666;
-}
-
-.join-form-section {
-  padding: 10vw 0 15vw;
-  border-top: 1px solid #bdb8ae;
-}
-
-.join-form {
-  max-width: 900px;
-  margin: auto;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  padding: 35px 0;
-  border-bottom: 1px solid #bdb8ae;
-  position: relative;
-}
-
-.form-group label {
-  position: absolute;
-  top:50px;
-  font-size: 25px;
+  gap: 10px;
   
-  color: #aaa;
-  transition: all .3s ease;
+
 }
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  height: 50px;
-  border: none;
-  outline: none;
-  background: transparent;
-  padding: 30px 0;
-
-  font-family: inherit;
-  font-size: 25px;
-  color: #171717;
-}
-
-.form-group:hover  label,.form-group input:not(:placeholder-shown)+ label{
+.login-text{
+  padding-top: 10px;
   
-  top:20px;
-  font-size: 13px;
-  color: #777;
+}
+.form-group:hover label,
+  .form-group input:not(:placeholder-shown) + label,
+  .form-group textarea:not(:placeholder-shown) + label {
+    top: -5px;
+    font-size: 13px;
+    color: #777;
+  }
+
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: #aaa;
-}
-
-.form-group textarea {
-  resize: vertical;
-  
-  line-height: 1.4;
-}
-
-.join-submit {
-  margin-top: 50px;
-  padding: 18px 30px;
-
-  border: 1px solid #171717;
-  background: #171717;
-  color: #f4f1ea;
-
-  font-family: inherit;
-  font-size: 15px;
-  cursor: pointer;
-
-  transition: all 0.3s ease;
-}
-
-.join-submit:hover {
-  background: transparent;
-  color: #171717;
-  transform: translateX(8px);
-}
-.cud{
-  cursor: default;
-}
-
-
-
-
-.ideas-page {
-  padding: 0 5vw;
-}
-
-.ideas-hero {
-  min-height: 75vh;
-  padding: 8vw 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.ideas-hero h1 {
-  font-size: clamp(70px, 12vw, 170px);
-  line-height: 0.82;
-  letter-spacing: -0.07em;
-}
-
-.ideas-intro {
-  max-width: 500px;
-  margin-top: 60px;
-  margin-left: auto;
-  font-size: 20px;
-  line-height: 1.5;
-  color: #666;
-}
-
-.ideas-list-section {
-  padding-bottom: 12vw;
-}
-
-.ideas-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
-  border-top: 1px solid #bdb8ae;
-
-  font-size: 11px;
-  letter-spacing: 2px;
-  color: #777;
-}
-
-.idea-card {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 60px;
-
-  padding: 60px 0;
-  border-top: 1px solid #bdb8ae;
-
-  transition: padding 0.3s ease;
-}
-
-.idea-card:hover {
-  padding-left: 20px;
-}
-
-.idea-number {
-  font-size: 14px;
-  color: #777;
-}
-
-.idea-category {
-  font-size: 11px;
-  letter-spacing: 2px;
-  color: #777;
-}
-
-.idea-content h2 {
-  margin-top: 20px;
-
-  font-size: clamp(50px, 8vw, 110px);
-  line-height: 0.85;
-  letter-spacing: -0.07em;
-  font-weight: 500;
-}
-
-.idea-content p {
-  max-width: 600px;
-  margin-top: 30px;
-
-  font-size: 17px;
-  line-height: 1.5;
-  color: #666;
-}
-
-.idea-content a {
-  display: inline-block;
-  margin-top: 35px;
-
-  color: #171717;
-  text-decoration: none;
-
-  font-size: 14px;
-}
-
-.idea-content a span {
-  display: inline-block;
-  margin-left: 8px;
-
-  transition: transform 0.3s ease;
-}
-
-.idea-content a:hover span {
-  transform: translate(5px, -5px);
-}
