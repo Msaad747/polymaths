@@ -5,9 +5,6 @@ import { useEffect, useState } from "react";
 export default function ScrollToTop() {
   const [style, setStyle] = useState({
     rotate: "180deg",
-    position: "fixed",
-    bottom: "50px",
-    right: "60px",
     display: `none`,
     transition: `all .3s ease`,
     color: `#171717`,
