@@ -10,14 +10,14 @@ export default function Blob(props) {
   const [property, setProperty] = useState("Repel");
 
   useEffect(() => {
-    console.log(props.ref.current.offsetHeight,props.ref.current.offsetWidth)
+    console.log(props.ref.current.offsetHeight, props.ref.current.offsetWidth);
     const maxX = props.ref.current.offsetWidth - 3;
     const maxY = props.ref.current.offsetHeight - 20;
     const centerX = props.ref.current.offsetWidth / 2;
     const centerY = props.ref.current.offsetHeight / 2;
-    for (let i = 0; i <= 200; i++) {
+    for (let i = 0; i <= 350; i++) {
       let angle = Math.random() * Math.PI * 2;
-      let radius = Math.random() * 1000;
+      let radius = Math.random() * 700;
 
       let ball = {
         x: Math.min(Math.max(0, centerX + Math.cos(angle) * radius), maxX),
@@ -33,28 +33,24 @@ export default function Blob(props) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setBalls((prev) => [...prev, ball]);
     }
-
-    
   }, []);
 
   useEffect(() => {
-  const handleMouseMove = (e) => {
-    const rect = props.ref.current.getBoundingClientRect();
+    const handleMouseMove = (e) => {
+      const rect = props.ref.current.getBoundingClientRect();
 
-    setMouse({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
-  };
+      setMouse({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      });
+    };
 
-  window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
 
-  return () => {
-    window.removeEventListener("mousemove", handleMouseMove);
-  };
-}, []);
-
-  
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   useEffect(() => {
     // Max Width And Heigth
