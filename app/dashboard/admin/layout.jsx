@@ -1,5 +1,4 @@
-import "./css/globals.css";
-
+import "../../css/globals.css";
 
 export const metadata = {
   title: "Society of Polymaths",
@@ -13,11 +12,7 @@ export const viewport = {
   maximumScale: 1,
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>{children}</body>
