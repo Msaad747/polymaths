@@ -89,6 +89,7 @@ button {
   justify-content: space-between;
   cursor: default;
   position: relative;
+  user-select: none;
 }
 
 .hero-small {
