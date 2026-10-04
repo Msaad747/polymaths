@@ -7,6 +7,7 @@
   padding: 8vw 5vw;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .login-container {
@@ -67,6 +68,7 @@
 */
 
 .login-form-group {
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -77,13 +79,14 @@
 
 /* Label stays in normal position */
 .login-form-group label {
-  position: static;
+  position: absolute;
+  top: 35px;
 
   display: block;
 
   margin: 0 0 12px 0;
 
-  font-size: 12px;
+  font-size: 19px;
   line-height: 1;
   letter-spacing: 1px;
 
@@ -91,7 +94,7 @@
 
   text-transform: uppercase;
 
-  transition: none;
+  transition: .4s ease;
 }
 
 /* Input */
@@ -290,6 +293,12 @@
   .signup-text a:hover {
     opacity: 0.6;
   }
+
+  .login-form-group input:hover + label, .login-form-group input:not(:placeholder-shown)+ label{
+    top: 10;
+    padding-top: 0;
+    font-size: 11px;
+  }
 }
 
 /* =========================
@@ -410,6 +419,11 @@
     margin-top: 30px;
 
     font-size: 13px;
+  }
+  .login-form-group input:focus-visible + label, .login-form-group input:not(:placeholder-shown)+ label{
+    top: 10;
+    padding-top: 0;
+    font-size: 11px;
   }
 }
 

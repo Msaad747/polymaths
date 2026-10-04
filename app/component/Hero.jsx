@@ -1,6 +1,12 @@
+"use client"
+import { useRef } from "react";
+import Blob from "./Blob";
+
 export default function Hero() {
+  const heroRef=useRef(null)
   return (
-    <section className="hero">
+    <section className="hero" ref={heroRef}>
+      <Blob ref={heroRef}/>
       <div className="hero-small">
         INSTITUTE OF MATHEMATICS
         <br />

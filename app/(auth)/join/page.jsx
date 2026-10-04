@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import "../../css/util.css";
 
@@ -11,6 +11,7 @@ export default function JoinPage() {
     field: "",
     reason: "",
   });
+  
 
   function handleChange(e) {
     setFormData({
@@ -49,7 +50,8 @@ export default function JoinPage() {
         </p>
       </section>
 
-      <section className="join-form-section">
+      <section className="join-form-section" >
+        
         <form onSubmit={handleSubmit} className="join-form">
           <div className="form-group">
             <input

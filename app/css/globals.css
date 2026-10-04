@@ -88,6 +88,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   cursor: default;
+  position: relative;
 }
 
 .hero-small {
@@ -470,6 +471,7 @@ button {
 }
 
 .join-form-section {
+  position: relative;
   padding: 10vw 0 15vw;
   border-top: 1px solid #bdb8ae;
 }

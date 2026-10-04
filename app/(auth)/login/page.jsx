@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState,useRef } from "react";
+import Blob from "../../component/Blob";
 import Link from "next/link";
-import "../../css/login.css"
+import "../../css/login.css";
 export default function Login() {
   const [formData, setFormData] = useState({
     email: "",
@@ -11,7 +12,7 @@ export default function Login() {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-
+  const loginRef=useRef(null)
   function handleChange(e) {
     const { name, value } = e.target;
 
@@ -50,29 +51,21 @@ export default function Login() {
   }
 
   return (
-    <main className="login-page">
-      <div className="login-container">
-
+    <main className="login-page" ref={loginRef}>
+      <div className="login-container" >
+        <Blob  ref={loginRef} />
         <div className="login-header">
           <Link href="/" className="login-logo">
             Polymaths
           </Link>
 
-          <p className="login-subtitle">
-            Welcome back.
-          </p>
+          <p className="login-subtitle">Welcome back.</p>
 
-          <h1>
-            Sign in to your account
-          </h1>
+          <h1>Sign in to your account</h1>
         </div>
 
         <form onSubmit={handleSubmit} className="login-form">
-
-          <div className="form-group">
-            <label htmlFor="email">
-              Email
-            </label>
+          <div className="login-form-group">
 
             <input
               id="email"
@@ -84,12 +77,10 @@ export default function Login() {
               autoComplete="email"
               required
             />
+            <label htmlFor="email">Email</label>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="password">
-              Password
-            </label>
+          <div className="login-form-group">
 
             <input
               id="password"
@@ -101,25 +92,16 @@ export default function Login() {
               autoComplete="current-password"
               required
             />
+            <label htmlFor="password">Password</label>
           </div>
 
           <div className="login-options">
-            <Link href="/forgot-password">
-              Forgot password?
-            </Link>
+            <Link href="/forgot-password">Forgot password?</Link>
           </div>
 
-          {error && (
-            <p className="login-error">
-              {error}
-            </p>
-          )}
+          {error && <p className="login-error">{error}</p>}
 
-          <button
-            type="submit"
-            className="login-button"
-            disabled={loading}
-          >
+          <button type="submit" className="login-button" disabled={loading}>
             {loading ? "Signing in..." : "Sign in"}
           </button>
         </form>
@@ -133,12 +115,8 @@ export default function Login() {
         </button>
 
         <p className="signup-text">
-          Don&apos;t have an account?{" "}
-          <Link href="/join">
-            Join Polymaths
-          </Link>
+          Don&apos;t have an account? <Link href="/join">Join Polymaths</Link>
         </p>
-
       </div>
     </main>
   );

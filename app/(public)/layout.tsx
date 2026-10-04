@@ -3,6 +3,7 @@ import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
 import ScrollToTop from "../component/ScrollToTop";
 
+
 export const metadata = {
   title: "Society of Polymaths",
   description:
@@ -25,6 +26,7 @@ export default function RootLayout({
       <Navbar />
       {children}
       <ScrollToTop />
+
 
       <Footer />
     </>
